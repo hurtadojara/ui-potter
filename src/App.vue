@@ -1,28 +1,52 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar/>
+    <tableInfo/>
+    <studentsNav/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue'
+import TableInfo from './components/TableInfo.vue'
+import StudentsNav from './components/studentsNav.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    TableInfo,
+    StudentsNav
   }
-}
+  }
 </script>
 
-<style>
+<style lang="scss">
+@font-face {
+  font-family: "MyPotter";
+  src: local("Parry Hotter"),
+  local("Parry Hotter Bold"),
+  url(./assets/ParryHotter.ttf);
+  font-weight: bold;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: MyPotter;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  color: #010407;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 </style>
